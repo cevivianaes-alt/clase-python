@@ -11,14 +11,14 @@ inventario[producto_nuevo] = cantidad_nueva
 producto_actualizar = input("Ingrese el producto que desea actualizar:")
 if (producto_actualizar in inventario):
     nueva_cantidad = int(input("Ingrese la nueva cantidad: "))
-        inventario[producto_actualizar] = nueva_cantidad
-        else:
-            print("El producto no existe en el inventario")
+    inventario[producto_actualizar] = nueva_cantidad
+else:
+    print("El producto no existe en el inventario")
 
-            print(inventario)
+    print(inventario)
 
-            #mostrar todos los productos en stock que sean menor a 5
-            print("Productos con stock bajo:")
-            for producto, cantidad in inventario.items():
-                if cantidad < 5:
-                        print(f"{producto}: {cantidad}")
+#mostrar todos los productos en stock que sean menor a 5
+print("Productos con stock bajo:")
+for producto, cantidad in inventario.items():
+    if cantidad < 5:
+        print(f"{producto}: {cantidad}")
